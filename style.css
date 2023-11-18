@@ -1,0 +1,118 @@
+:root {
+    --clr-text-400: hsl(158, 36%, 37%);
+    --clr-text-500: hsl(158, 35%, 20%);
+    --clr-background: hsl(30, 38%, 92%);
+    --clr-title-900: hsl(212, 21%, 14%);
+    --clr-paragraph-400: hsl(228, 12%, 48%);
+    --clr-content-background: hsl(0, 0%, 100%);
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+
+    --ff-accent: 'Fraunces', serif;
+    --ff-paragraph: 'Montserrat', sans-serif;
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    line-height: 1.7;
+}
+h1{
+    line-height: 1;
+
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+p{
+    overflow-wrap: break-word; /* no horizontal scrolling*/
+}
+/* General Styling */
+
+body {
+    font-family: var(--ff-paragraph);
+    font-weight: var(--fw-regular);
+    font-size: 0.875rem;
+    color: var(--clr-paragraph-400);
+    background-color: var(--clr-background);
+    /* for this project*/
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    margin: 1rem;
+}  
+/* Utilities */
+
+.visually-hidden:not(:focus):not(:active){
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+
+}
+
+.flex-group{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.product{
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+    background-color: var(--clr-content-background);
+    border-radius: 0.7rem;
+    overflow: hidden;
+
+} 
+.product__content{
+    padding: var(--content-padding);
+    display: grid;
+    gap: var(--content-spacing);
+}
+.product__category{
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 0.8125rem;
+}
+.product__title{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color: var(--clr-title-900);
+}
+.product__price{
+    font-size: 2rem;
+    font-family: var(--ff-accent);
+    color:hsl(158, 36%, 37%);
+}
+.button{
+    background-color: var(--clr-text-400);
+    color: var(--clr-content-background);
+    padding: 1em 1.5em;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-decoration: none ;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.925rem;
+    font-weight: var(--fw-bold);
+
+}
+.button:is(:hover, :focus){
+    background-color: var(--clr-text-500);
+}
+.bx{
+    
+}
