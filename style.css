@@ -69,11 +69,21 @@ body {
 .product{
     --content-padding: 1.5rem;
     --content-spacing: 1rem;
+    display: grid;
     background-color: var(--clr-content-background);
-    border-radius: 0.7rem;
+    border-radius: 0.5rem;
     overflow: hidden;
+    max-width: 600px;
 
 } 
+
+@media (min-width: 600px) {
+    .product{
+        --content-padding: 2rem;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 .product__content{
     padding: var(--content-padding);
     display: grid;
@@ -113,6 +123,8 @@ body {
 .button:is(:hover, :focus){
     background-color: var(--clr-text-500);
 }
-.bx{
-    
+.cart{
+    width: 15px;
+    height: 16px;
+
 }
